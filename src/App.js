@@ -5,6 +5,7 @@ import Cart from "./components/Cart";
 import { useState } from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -14,7 +15,7 @@ function App() {
       <BrowserRouter>
       <Navbar setOpen={setOpen} />
         <Routes>
-          <Route path="/" element={<Products />} />
+          <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />  
           <Route path="/product/:id" element={<Product /> } />  
         </Routes>
