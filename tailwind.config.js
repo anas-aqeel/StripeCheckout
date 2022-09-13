@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ['class', '[data-mode="dark"]'],
   content: [
     "./src/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
+
     extend: {
       gridTemplateRows: {
         '[auto,auto,1fr]': 'auto auto 1fr',

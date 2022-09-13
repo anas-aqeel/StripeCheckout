@@ -22,7 +22,6 @@ export default function Navbar({setOpen}) {
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -35,13 +34,13 @@ export default function Navbar({setOpen}) {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    className="block h-10 w-25 w-auto lg:hidden"
+                    src="/logo/logo-white.png"
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    className="hidden h-10 w-25 w-auto lg:block"
+                    src="/logo/logo-white.png"
                     alt="Your Company"
                   />
                 </div>
@@ -69,11 +68,10 @@ export default function Navbar({setOpen}) {
                   onClick={()=>setOpen(true)}
                   className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
-                  <span className="sr-only">View notifications</span>
+                  <span className="sr-only">View cart</span>
                   <ShoppingBagIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
 
-                {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
