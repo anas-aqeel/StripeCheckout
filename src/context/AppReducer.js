@@ -5,7 +5,10 @@ export default (state, { type, payload }) => {
             [payload.id]: payload.data,
         };
     } else if (type == "DELETE_FROM_CART") {
-        delete state[payload.id];
+        console.log(state)
+        delete state[payload.id]; 
+        
         return state;
+        // return {...Object.keys(state).filter((e) => e != payload.id).map(e=>state[e])};
     } else return state;
 };

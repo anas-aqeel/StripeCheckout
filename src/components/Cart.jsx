@@ -7,6 +7,7 @@ import { MYCONTEXT } from '../context/GlobalContext'
 
 export default function Cart({ open, setOpen }) {
   let { state: products, dispatch } = useContext(MYCONTEXT);
+  console.log(products)
   let productKeys = Object.keys(products);
   let handleRemove = (id) =>{
     dispatch({

@@ -1,38 +1,9 @@
 export default  () => {
-
-    const footerNavs = [
-        {
-            href: 'javascript:void()',
-            name: 'About'
-        },
-        {
-            href: 'javascript:void()',
-            name: 'Blog'
-        },
-        {
-            href: 'javascript:void()',
-            name: ''
-        },
-        {
-            href: 'javascript:void()',
-            name: 'Team'
-        },
-        {
-            href: 'javascript:void()',
-            name: 'Careers'
-        },
-
-        {
-            href: 'javascript:void()',
-            name: 'Suuport'
-        }
-    ]
-
     return (
         <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <a href="" class="flex items-center mb-4 sm:mb-0">
-                    <img src="/logo/logo-black.png" class="mr-3 h-20 w-25" alt="Shoe Logo" />
+                    <img src="/logo/logo-black.png" class="mr-3 h-8" alt="Shoe Logo" />
                 </a>
                 <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
                     <li>

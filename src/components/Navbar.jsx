@@ -34,12 +34,12 @@ export default function Navbar({setOpen}) {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block h-10 w-25 w-auto lg:hidden"
+                    className="block h-8 w-auto lg:hidden"
                     src="/logo/logo-white.png"
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-10 w-25 w-auto lg:block"
+                    className="hidden h-8 w-auto lg:block"
                     src="/logo/logo-white.png"
                     alt="Your Company"
                   />
