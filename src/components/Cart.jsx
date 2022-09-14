@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useContext } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
@@ -7,14 +6,13 @@ import { MYCONTEXT } from '../context/GlobalContext'
 
 export default function Cart({ open, setOpen }) {
   let { state: products, dispatch } = useContext(MYCONTEXT);
-  console.log(products)
-  let productKeys = Object.keys(products);
   let handleRemove = (id) =>{
     dispatch({
       type: "DELETE_FROM_CART",
       payload: {id}
     })
   } 
+  
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={setOpen}>
@@ -62,7 +60,7 @@ export default function Cart({ open, setOpen }) {
                       <div className="mt-8">
                         <div className="flow-root">
                           <ul role="list" className="-my-6 divide-y divide-gray-200">
-                            {productKeys.map((key) => {
+                            {Object.keys(products).map((key) => {
                               return(
                               <li key={products[key].id} className="flex py-6">
                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">

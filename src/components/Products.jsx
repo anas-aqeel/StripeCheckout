@@ -4,6 +4,7 @@ import { MYCONTEXT } from "../context/GlobalContext"
 
 export default function Products() {
   let {products} = useContext(MYCONTEXT);
+  
     return (
       <div id='products' className="bg-white">
         <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">

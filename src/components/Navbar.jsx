@@ -4,6 +4,8 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ShoppingBagIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom'
+
+
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Products', href: '/products', current: false },
@@ -96,7 +98,7 @@ export default function Navbar({setOpen}) {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            href="#"
+                            to=""
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Your Profile
@@ -106,7 +108,7 @@ export default function Navbar({setOpen}) {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            href="#"
+                            to=""
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Settings
@@ -116,7 +118,7 @@ export default function Navbar({setOpen}) {
                       <Menu.Item>
                         {({ active }) => (
                           <Link
-                            href="#"
+                            to=""
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Sign out

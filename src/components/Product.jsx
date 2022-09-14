@@ -36,6 +36,7 @@ export default function Product() {
     });
     quantity.current+=1
   }
+  
   return (
     <div className="bg-white">
       <div className="pt-6">
@@ -73,7 +74,6 @@ export default function Product() {
           </ol>
         </nav>
 
-        {/* Image gallery */}
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
           <div className="aspect-w-3 aspect-h-4 hidden overflow-hidden rounded-lg lg:block">
             <img
@@ -107,18 +107,16 @@ export default function Product() {
           </div>
         </div>
 
-        {/* Product info */}
         <div className="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
             <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{product.name}</h1>
           </div>
 
-          {/* Options */}
+          
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
             <p className="text-3xl tracking-tight text-gray-900">{product.price}</p>
 
-            {/* product.Reviews */}
             <div className="mt-6">
               <h3 className="sr-only">product.Reviews</h3>
               <div className="flex items-center">
@@ -142,7 +140,6 @@ export default function Product() {
             </div>
 
             <form className="mt-10">
-              {/* Colors */}
               <div>
                 <h3 className="text-sm font-medium text-gray-900">Color</h3>
 
@@ -179,7 +176,6 @@ export default function Product() {
                 </RadioGroup>
               </div>
 
-              {/* Sizes */}
               <div className="mt-10">
                 <div className="flex items-center justify-between">
                   <h3 className="text-sm font-medium text-gray-900">Size</h3>
@@ -252,7 +248,6 @@ export default function Product() {
           </div>
 
           <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pb-16 lg:pr-8">
-            {/* Description and details */}
             <div>
               <h3 className="sr-only">Description</h3>
 
