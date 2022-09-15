@@ -1,4 +1,4 @@
-import { Fragment, useContext } from 'react'
+import { Fragment, useContext, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { MYCONTEXT } from '../context/GlobalContext'
@@ -12,7 +12,7 @@ export default function Cart({ open, setOpen }) {
       payload: {id}
     })
   } 
-  
+  let [total, setTotal] = useState(0);
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={setOpen}>
@@ -105,7 +105,15 @@ export default function Cart({ open, setOpen }) {
                     <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <p>Subtotal</p>
-                        <p>$262.00</p>
+                        <p>
+                         {
+                         Object.keys(products)?.map((i) => {
+                          total = products[i].price * products[i].quantity;
+                         })
+                         
+                         }
+                        {total}
+                        </p>
                       </div>
                       <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                       <div className="mt-6">
