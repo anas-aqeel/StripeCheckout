@@ -5,6 +5,8 @@
   "dependencies": {
     "@headlessui/react": "^1.7.0",
     "@heroicons/react": "^2.0.10",
+    "@stripe/react-stripe-js": "^1.10.0",
+    "@stripe/stripe-js": "^1.36.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -12,13 +14,16 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "stripe": "^10.10.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "lambda-serve": "netlify-lambda serve netlify/functions",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"npm run start\" \"npm run lambda-serve\""
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +45,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.9",
+    "concurrently": "^7.4.0",
+    "netlify-lambda": "^2.0.15",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8"
   }

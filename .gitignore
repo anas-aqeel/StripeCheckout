@@ -10,8 +10,11 @@
 
 # production
 /build
+/lambda
 
 # misc
+
+/netlify.toml
 .DS_Store
 .env.local
 .env.development.local
