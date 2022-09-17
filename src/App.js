@@ -14,19 +14,19 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navbar setOpen={setOpen} />
-        <GlobalContext>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/product/:id" element={<Product />} />
-            <Route path="/checkout" element={<Checkout />} />
-          </Routes>
-        <Cart open={open} setOpen={setOpen} />
-        </GlobalContext>
-        <Footer />
-      </BrowserRouter>
+      <GlobalContext>
+        <BrowserRouter>
+          <Navbar setOpen={setOpen} />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/product/:id" element={<Product />} />
+              <Route path="/checkout" element={<Checkout />} />
+            </Routes>
+          <Cart open={open} setOpen={setOpen} />
+          <Footer />
+        </BrowserRouter>
+      </GlobalContext>
     </div>
   );
 }
