@@ -13,7 +13,6 @@ function App() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="App">
       <GlobalContext>
         <BrowserRouter>
           <Navbar setOpen={setOpen} />
@@ -27,7 +26,6 @@ function App() {
           <Footer />
         </BrowserRouter>
       </GlobalContext>
-    </div>
   );
 }
 
